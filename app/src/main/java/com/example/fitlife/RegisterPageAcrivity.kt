@@ -32,7 +32,7 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
                 val inputEmail: String = binding.etEmail.text.toString().trim()
                 val inputPassword: String = binding.etPassword.text.toString().trim()
 
-                //validasi input kosong
+                //validasi input
                 var isErrorFields = false
                 if (inputNama.isEmpty()){
                     isErrorFields = true
