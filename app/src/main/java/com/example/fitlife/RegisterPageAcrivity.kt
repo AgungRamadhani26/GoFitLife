@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.fitlife.databinding.ActivityRegisterPageBinding
 
+
 class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
     //Deklarasi Binding
     private lateinit var binding: ActivityRegisterPageBinding
@@ -24,9 +25,9 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        when(v.id){
+        when(v){
             //kalau button sign up di klik
-            R.id.btn_sign_up -> {
+            binding.btnSignUp -> {
                 //Mengambil nilai yang dimasukkan pengguna
                 val inputNama: String = binding.etNama.text.toString().trim()
                 val inputEmail: String = binding.etEmail.text.toString().trim()
@@ -65,7 +66,7 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(intent)
                 }
             }
-            R.id.signin_to_login -> {
+            binding.signinToLogin -> {
                 val intent = Intent(this@RegisterPageAcrivity, LoginPageActivity::class.java)
                 startActivity(intent)
             }

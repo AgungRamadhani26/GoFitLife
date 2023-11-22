@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.fitlife.databinding.ActivityLoginPageBinding
-import com.example.fitlife.databinding.ActivityRegisterPageBinding
 
 class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
     //Deklarasi Binding
@@ -30,8 +29,8 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        when(v.id){
-            R.id.btn_sign_in -> {
+        when(v){
+            binding.btnSignIn -> {
                 //Mengambil nilai yang dimasukkan pengguna
                 val inputEmailLogin = binding.etEmailLog.text.toString().trim()
                 val inputPasswordLogin = binding.etPasswordLog.text.toString().trim()
@@ -56,7 +55,7 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
 
                 }
             }
-            R.id.login_to_signup -> {
+            binding.loginToSignup -> {
                 val intent = Intent(this@LoginPageActivity, RegisterPageAcrivity::class.java)
                 startActivity(intent)
             }
