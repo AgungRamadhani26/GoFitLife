@@ -21,4 +21,11 @@
     <string name="log_capt">Пожалуйста, введите свои данные</string>
     <string name="sign_in">Войти</string>
     <string name="dny_have_acc">У вас нет аккаунта?</string>
+
+    <!--Bottom Navbar-->
+    <string name="home">Home</string>
+    <string name="drink">Drink</string>
+    <string name="clock">Clock</string>
+    <string name="globe">Globe</string>
+    <string name="user_alt">User_alt</string>
 </resources>

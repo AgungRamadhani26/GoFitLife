@@ -21,7 +21,7 @@
             android:name=".RegisterPageAcrivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".BottomNavbarActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"

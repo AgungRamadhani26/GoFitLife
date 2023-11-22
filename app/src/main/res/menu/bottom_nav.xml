@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/drink"
+        android:icon="@drawable/drink"/>
+    <item
+        android:id="@+id/clock"
+        android:icon="@drawable/clock"/>
+    <item
+        android:id="@+id/globe"
+        android:icon="@drawable/globe"/>
+    <item
+        android:id="@+id/user_alt"
+        android:icon="@drawable/user_alt"/>
+</menu>

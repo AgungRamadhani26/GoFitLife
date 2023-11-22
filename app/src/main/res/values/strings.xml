@@ -21,4 +21,11 @@
     <string name="log_capt">Silakan masukkan detail Anda</string>
     <string name="sign_in">Masuk</string>
     <string name="dny_have_acc">Apakah Anda tidak punya akun?</string>
+
+    <!--Bottom Navbar-->
+    <string name="home">Home</string>
+    <string name="drink">Drink</string>
+    <string name="clock">Clock</string>
+    <string name="globe">Globe</string>
+    <string name="user_alt">User_alt</string>
 </resources>
