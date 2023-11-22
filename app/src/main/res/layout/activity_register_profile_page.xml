@@ -230,10 +230,11 @@
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="44dp"
             android:src="@drawable/baseline_arrow_drop_down_24"
+            android:background="@drawable/roundedrightcorner"
             app:layout_constraintEnd_toEndOf="@+id/et_tingkat_aktifitas"
-            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/et_tingkat_aktifitas"
             app:layout_constraintTop_toTopOf="@+id/et_tingkat_aktifitas" />
 
