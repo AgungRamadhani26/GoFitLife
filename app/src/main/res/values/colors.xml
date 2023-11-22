@@ -5,4 +5,5 @@
     <color name="lightGreen">#ECFDF5</color>
     <color name="greenPrimary">#34D399</color>
     <color name="grey1">#646060</color>
+    <color name="tranparant">#95FFFFFF</color>
 </resources>
