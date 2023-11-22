@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="30dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterProfilePageActivity">
+
+        <TextView
+            android:id="@+id/tv_hallo_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/hallo"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_reg_capt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/reg_prof_capt"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hallo_reg" />
+
+        <TextView
+            android:id="@+id/tv_foto_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/foto_profil"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_reg_capt"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_fotoprofil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_foto_profil" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/tv_nama"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_fotoprofil"/>
+
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edit_text_background_selector"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+        <TextView
+            android:id="@+id/tv_jenis_kelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/jenis_kelamin"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_nama"
+            app:layout_constraintTop_toBottomOf="@+id/et_nama" />
+
+        <RadioGroup
+            android:id="@+id/rb_jenis_kelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jenis_kelamin" >
+
+            <RadioButton
+                android:id="@+id/rb_jenis_kelamin_lk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/laki" />
+
+            <RadioButton
+                android:id="@+id/rb_jenis_kelamin_pr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perempuan" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_tanggal_lahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/tanggal_lahir"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_jenis_kelamin"
+            app:layout_constraintTop_toBottomOf="@+id/rb_jenis_kelamin" />
+
+        <EditText
+            android:id="@+id/et_tanggal_lahir"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edit_text_background_selector"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="text"
+            android:hint="@string/hari_bulan_tahun"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir" />
+
+        <TextView
+            android:id="@+id/tv_tinggi_badan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/tinggi_badan"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_tanggal_lahir"
+            app:layout_constraintTop_toBottomOf="@+id/et_tanggal_lahir" />
+
+        <EditText
+            android:id="@+id/et_tinggi_badan"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edit_text_background_selector"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tinggi_badan" />
+
+        <TextView
+            android:id="@+id/tv_berat_badan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/berat_badan"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_tinggi_badan"
+            app:layout_constraintTop_toBottomOf="@+id/et_tinggi_badan" />
+
+        <EditText
+            android:id="@+id/et_berat_badan"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edit_text_background_selector"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_berat_badan" />
+
+        <TextView
+            android:id="@+id/tv_tingkat_aktifitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/tingkat_aktivitas"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_berat_badan"
+            app:layout_constraintTop_toBottomOf="@+id/et_berat_badan" />
+
+        <Spinner
+            android:id="@+id/et_tingkat_aktifitas"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edit_text_background_selector"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tingkat_aktifitas"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_arrow_drop_down_24"
+            app:layout_constraintEnd_toEndOf="@+id/et_tingkat_aktifitas"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="@+id/et_tingkat_aktifitas"
+            app:layout_constraintTop_toTopOf="@+id/et_tingkat_aktifitas" />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="285dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/greenPrimary"
+            android:background="@drawable/btn_theme_2"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/simpan"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_tingkat_aktifitas" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
