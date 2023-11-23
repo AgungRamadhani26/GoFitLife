@@ -42,6 +42,21 @@
     <string name="extra_aktif">Extra aktif</string>
     <string name="simpan">Simpan</string>
 
+    <!--    Perubahan baru-->
+    <string name="edit_informasi_pribadi">Edit Informasi Pribadi</string>
+    <string name="informasi_rahasia">Informasi Rahasia</string>
+    <string name="jangan_kasi_tahu">Ssst! jangan kasih tau siapa-siapa.</string>
+    <string name="password_lama">Password lama</string>
+    <string name="password_baru">Password Baru</string>
+    <string name="konfirmasi_password">Konfirmasi password</string>
+
+    <!--Perubahan baru-->
+    <string name="informasi_pribadi">Informasi Pribadi</string>
+    <string name="bisa_ubah_info_diri">Disini kamu bisa mengubah informasi dirimu loh!</string>
+    <string name="username">Username</string>
+    <string name="nama_panggilan">Nama panggilan</string>
+
+
     <!--Bottom Navbar-->
     <string name="home">Home</string>
     <string name="drink">Drink</string>
