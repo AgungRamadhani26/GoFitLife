@@ -2,13 +2,15 @@
     <string name="app_name">GoFitLife</string>
     <string name="splash_name">GoFitLife</string>
     <string name="welcome">Selamat datang</string>
-    <string name="reg_capt">Tolong masukan detail kamu untuk registrasi di sini!</string>
+    <string name="reg_capt">Isi data diri Anda disini!</string>
     <string name="tv_nama">Nama</string>
     <string name="tv_email">Email</string>
-    <string name="tv_password">Kata sandi</string>
-    <string name="remember">Ingat saya</string>
-    <string name="signup">Mendaftar</string>
-    <string name="signin">Masuk</string>
+    <string name="tv_password">Password</string>
+    <string name="tv_konf_password">Konfirmasi Password</string>
+    <string name="remember">Reminder Me</string>
+    <string name="signup">Daftar</string>
+    <string name="signin">Login</string>
+    <string name="lupa_password">Lupa kata sandi</string>
     <string name="dy_have_acc">Apakah anda memiliki akun ?</string>
     <string name="title_activity_login_page">AktivitasHalamanLogin</string>
     <string name="prompt_email">Email</string>
@@ -18,9 +20,43 @@
     <string name="invalid_username">Bukan nama pengguna yang valid</string>
     <string name="invalid_password">Kata sandi minimal 5 karakter</string>
     <string name="login_failed">"Login gagal"</string>
-    <string name="log_capt">Silakan masukkan detail Anda</string>
+    <string name="log_capt">Apakah aku mengenalmu?</string>
     <string name="sign_in">Masuk</string>
-    <string name="dny_have_acc">Apakah Anda tidak punya akun?</string>
+    <string name="dny_have_acc">Apakah kamu tidak mempunyai akun ?</string>
+
+    <!--    perubahan baru-->
+    <string name="hallo">Hallo</string>
+    <string name="reg_prof_capt">Silahkan isi data diri anda</string>
+    <string name="foto_profil">Foto profil</string>
+    <string name="jenis_kelamin">Jenis kelamin</string>
+    <string name="laki">Laki-laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="tanggal_lahir">Tanggal lahir</string>
+    <string name="hari_bulan_tahun">dd/mm/yyyy</string>
+    <string name="tinggi_badan">Tinggi badan</string>
+    <string name="berat_badan">Berat badan</string>
+    <string name="tingkat_aktivitas">Tingkat aktivitas</string>
+    <string name="aktif">Aktif</string>
+    <string name="aktif_ringan">Aktif ringan</string>
+    <string name="cukup_aktif">Cukup aktif</string>
+    <string name="sangat_aktif">Sangat aktif</string>
+    <string name="extra_aktif">Extra aktif</string>
+    <string name="simpan">Simpan</string>
+
+    <!--    Perubahan baru-->
+    <string name="edit_informasi_pribadi">Edit Informasi Pribadi</string>
+    <string name="informasi_rahasia">Informasi Rahasia</string>
+    <string name="jangan_kasi_tahu">Ssst! jangan kasih tau siapa-siapa.</string>
+    <string name="password_lama">Password lama</string>
+    <string name="password_baru">Password Baru</string>
+    <string name="konfirmasi_password">Konfirmasi password</string>
+
+    <!--Perubahan baru-->
+    <string name="informasi_pribadi">Informasi Pribadi</string>
+    <string name="bisa_ubah_info_diri">Disini kamu bisa mengubah informasi dirimu loh!</string>
+    <string name="username">Username</string>
+    <string name="nama_panggilan">Nama panggilan</string>
+
 
     <!--Bottom Navbar-->
     <string name="home">Home</string>

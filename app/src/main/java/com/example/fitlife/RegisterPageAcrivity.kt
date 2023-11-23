@@ -20,7 +20,7 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
 
         //menambah onclicklistener
         binding.btnSignUp.setOnClickListener(this)
-        binding.signinToLogin.setOnClickListener(this)
+        binding.signupToLogin.setOnClickListener(this)
 
     }
 
@@ -29,19 +29,12 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
             //kalau button sign up di klik
             binding.btnSignUp -> {
                 //Mengambil nilai yang dimasukkan pengguna
-                val inputNama: String = binding.etNama.text.toString().trim()
                 val inputEmail: String = binding.etEmail.text.toString().trim()
                 val inputPassword: String = binding.etPassword.text.toString().trim()
+                val inputKonfPassword: String =binding.etKonfPassword.text.toString().trim()
 
                 //validasi input
                 var isErrorFields = false
-                if (inputNama.isEmpty()){
-                    isErrorFields = true
-                    binding.etNama.error = "Field nama harus diisi"
-                }else if(!inputNama.matches("^[a-zA-Z ]+\$".toRegex())){
-                    isErrorFields = true
-                    binding.etNama.error = "Field nama hanya dapat berisi huruf dan spasi"
-                }
 
                 if (inputEmail.isEmpty()){
                     isErrorFields = true
@@ -52,8 +45,16 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
                 }
 
                 if (inputPassword.isEmpty()){
-                    isErrorFields =true
+                    isErrorFields = true
                     binding.etPassword.error = "Password harus diisi"
+                }
+
+                if (inputKonfPassword.isEmpty()){
+                    isErrorFields = true
+                    binding.etKonfPassword.error = "Konfirmasi password harus diisi"
+                }else if (!inputKonfPassword.equals(inputPassword)){
+                    isErrorFields = true
+                    binding.etKonfPassword.error = "Konfirmasi password tidak match dengan password"
                 }
 
                 if (!isErrorFields){
@@ -61,12 +62,12 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
                     bundle.putString("email", inputEmail)
 
                     //Mengirim intent ke login page
-                    val intent = Intent(this@RegisterPageAcrivity, LoginPageActivity::class.java)
+                    val intent = Intent(this@RegisterPageAcrivity, RegisterProfilePageActivity::class.java)
                     intent.putExtras(bundle)
                     startActivity(intent)
                 }
             }
-            binding.signinToLogin -> {
+            binding.signupToLogin -> {
                 val intent = Intent(this@RegisterPageAcrivity, LoginPageActivity::class.java)
                 startActivity(intent)
             }

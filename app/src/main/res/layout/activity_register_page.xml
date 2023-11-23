@@ -43,34 +43,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_welcome_reg" />
 
         <TextView
-            android:id="@+id/tv_nama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="@string/tv_nama"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.11"
-            app:layout_constraintStart_toStartOf="@+id/tv_reg_capt"
-            app:layout_constraintTop_toBottomOf="@+id/tv_reg_capt" />
-
-        <EditText
-            android:id="@+id/et_nama"
-            android:layout_width="285dp"
-            android:layout_height="44dp"
-            android:background="@drawable/edit_text_background_selector"
-            android:fontFamily="@font/poppins_regular"
-            android:inputType="text"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
-
-        <TextView
             android:id="@+id/tv_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,9 +51,9 @@
             android:text="@string/tv_email"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_nama"
-            app:layout_constraintTop_toBottomOf="@+id/et_nama" />
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reg_capt" />
 
         <EditText
             android:id="@+id/et_email"
@@ -126,17 +98,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_password" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
+        <TextView
+            android:id="@+id/tv_konf_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_light"
-            android:layout_marginStart="5dp"
-            android:text="@string/remember"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/tv_konf_password"
             android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_password"
             app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <EditText
+            android:id="@+id/et_konf_password"
+            android:layout_width="285dp"
+            android:layout_height="44dp"
+            android:background="@drawable/edit_text_background_selector"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_konf_password" />
 
         <Button
             android:id="@+id/btn_sign_up"
@@ -144,6 +132,7 @@
             android:layout_height="46dp"
             android:layout_marginTop="40dp"
             android:backgroundTint="@color/greenPrimary"
+            android:background="@drawable/btn_theme_2"
             android:fontFamily="@font/poppins_semibold"
             android:text="@string/signup"
             android:textColor="@color/black"
@@ -151,7 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintTop_toBottomOf="@+id/et_konf_password" />
 
         <TextView
             android:id="@+id/textView2"
@@ -167,7 +156,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
         <TextView
-            android:id="@+id/signin_to_login"
+            android:id="@+id/signup_to_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
