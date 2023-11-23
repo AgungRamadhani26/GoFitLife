@@ -78,4 +78,5 @@
     <string name="profil_jenisKelamin" translatable="false">Pria</string>
     <string name="profil_notifikasi_makan" translatable="false">Pengingat makan dan minum</string>
     <string name="profil_notifikasi_olahraga" translatable="false">Pengingat olahraga</string>
+    <string name="keluar" translatable="false">keluar</string>
 </resources>

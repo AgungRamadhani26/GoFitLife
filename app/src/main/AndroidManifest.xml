@@ -27,10 +27,10 @@
             android:name=".RegisterPageAcrivity"
             android:exported="false" />
         <activity
-            android:name=".BottomNavbarActivity"
+            android:name=".EditPasswordPageActivity"
             android:exported="false" />
         <activity
-            android:name=".EditPasswordPageActivity"
+            android:name=".BottomNavbarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
