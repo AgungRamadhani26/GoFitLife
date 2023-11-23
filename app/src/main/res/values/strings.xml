@@ -28,4 +28,18 @@
     <string name="clock">Clock</string>
     <string name="globe">Globe</string>
     <string name="user_alt">User_alt</string>
+
+    <!-- Login Page -->
+    <string name="user_alt_greeting" translatable="false">Hari yang indah, katemills</string>
+    <string name="profil_pengaturanAkun" translatable="false">Pengaturan Akun</string>
+    <string name="profil_info_namaPengguna" translatable="false">Nama pengguna</string>
+    <string name="profil_namaPengguna" translatable="false">dheaic_17</string>
+    <string name="profil_info_namaPanggilan" translatable="false">Nama panggilan</string>
+    <string name="profil_namaPanggilan" translatable="false">dhea ice</string>
+    <string name="profil_info_email" translatable="false">Email</string>
+    <string name="profil_email" translatable="false">chadellea@gma...</string>
+    <string name="profil_info_jenisKelamin" translatable="false">Jenis kelamin</string>
+    <string name="profil_jenisKelamin" translatable="false">Pria</string>
+    <string name="profil_notifikasi_makan" translatable="false">Pengingat makan dan minum</string>
+    <string name="profil_notifikasi_olahraga" translatable="false">Pengingat olahraga</string>
 </resources>
