@@ -66,7 +66,7 @@
     <string name="user_alt">User_alt</string>
 
     <!-- Login Page -->
-    <string name="user_alt_greeting" translatable="false">Hari yang indah, katemills</string>
+    <string name="user_alt_greeting" translatable="false">Hari yang indah, dheaic_17</string>
     <string name="profil_pengaturanAkun" translatable="false">Pengaturan Akun</string>
     <string name="profil_info_namaPengguna" translatable="false">Nama pengguna</string>
     <string name="profil_namaPengguna" translatable="false">dheaic_17</string>
@@ -79,4 +79,7 @@
     <string name="profil_notifikasi_makan" translatable="false">Pengingat makan dan minum</string>
     <string name="profil_notifikasi_olahraga" translatable="false">Pengingat olahraga</string>
     <string name="keluar" translatable="false">keluar</string>
+
+    <!-- Article Page -->
+    <string name="article">Artikel Kesehatan</string>
 </resources>
