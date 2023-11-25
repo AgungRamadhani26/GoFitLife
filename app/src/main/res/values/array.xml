@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="judul">
+        <item>Sarapan</item>
+        <item>Makan Siang</item>
+        <item>Makan Malam</item>
+    </string-array>
+
+    <string-array name="subjudul1">
+        <item>Omelete sandwidch</item>
+        <item>Tofu with egg</item>
+        <item>Chicken with corn</item>
+    </string-array>
+
+    <string-array name="kkal1">
+        <item>333 KKAL | 20 menit</item>
+        <item>140 KKAL | 20 menit</item>
+        <item>223 KKAL | 20 menit</item>
+    </string-array>
+
+    <string-array name="subjudul2">
+        <item>Apple</item>
+        <item>Grapes</item>
+        <item>Banana</item>
+    </string-array>
+
+    <string-array name="kkal2">
+        <item>14 KKAL</item>
+        <item>89 KKAL</item>
+        <item>62 KKAL</item>
+    </string-array>
+
+</resources>

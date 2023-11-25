@@ -24,6 +24,8 @@
             app:menu="@menu/bottom_nav"
             android:background="@color/greenSecondary"
             app:itemTextColor="@color/black"
+            app:itemIconSize="35dp"
+            app:itemRippleColor="@color/white"
             app:itemIconTint="@color/icons_color_selector"
             app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"/>
 

@@ -79,4 +79,28 @@
     <string name="profil_notifikasi_makan" translatable="false">Pengingat makan dan minum</string>
     <string name="profil_notifikasi_olahraga" translatable="false">Pengingat olahraga</string>
     <string name="keluar" translatable="false">keluar</string>
+
+    <!--home-->
+
+    <!--Area1-->
+    <!--Button-->
+    <string name="terbakar">Terbakar</string>
+    <string name="target">Target</string>
+    <string name="konsumsi">Konsumsi</string>
+    <!--Image description-->
+    <string name="greencard">greenCard</string>
+
+    <!--group1-->
+    <!--text-->
+    <string name="aktivitas">Aktivitas</string>
+    <string name="sisa">Sisa</string>
+    <string name="_1000_kcal">1000 KCAL</string>
+    <string name="_400_kcal">400 kcal</string>
+    <string name="_600_kcal">600 KCAL</string>
+    <string name="kegiatan">Kegiatan</string>
+    <!--Animation precentage-->
+    <string name="percentage">60%</string>
+
+    <!--group2-->
+
 </resources>
