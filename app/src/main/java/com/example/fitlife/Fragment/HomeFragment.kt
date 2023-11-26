@@ -8,14 +8,22 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.fitlife.R
 import com.example.fitlife.adapters.Adapter1
+import com.example.fitlife.adapters.Adapter2
+import com.example.fitlife.adapters.Adapter3
 import com.example.fitlife.databinding.FragmentHomeBinding
 import com.example.fitlife.models.Model1
+import com.example.fitlife.models.Model2
+import com.example.fitlife.models.Model3
 
 class HomeFragment : Fragment() {
     // binding fragment_home.xml
     private lateinit var binding: FragmentHomeBinding
     // RecyclerView 1
     private lateinit var adapter1: Adapter1
+    // RecyclerView 2
+    private lateinit var adapter2: Adapter2
+    // RecylerView 3
+    private lateinit var adapter3: Adapter3
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // inflate
@@ -25,7 +33,9 @@ class HomeFragment : Fragment() {
         // function excecuted animation
         animationRun()
         // initialitation function recyclerView
-        setAdapter()
+        setAdapter1()
+        setAdapter2()
+        setAdapter3()
         // click
         setClick()
 
@@ -36,15 +46,28 @@ class HomeFragment : Fragment() {
         binding.btAktivitas.setOnClickListener{
             binding.btAktivitas.setBackgroundResource(R.drawable.button_active)
             binding.btKonsumsi.setBackgroundResource(R.drawable.button_nonactive)
+            binding.btKegiatan.setBackgroundResource(R.drawable.button_nonactive)
             binding.group1.visibility = View.VISIBLE
             binding.group2.visibility = View.GONE
+            binding.group3.visibility = View.GONE
         }
 
         binding.btKonsumsi.setOnClickListener{
-            binding.btKonsumsi.setBackgroundResource(R.drawable.button_active)
             binding.btAktivitas.setBackgroundResource(R.drawable.button_nonactive)
+            binding.btKonsumsi.setBackgroundResource(R.drawable.button_active)
+            binding.btKegiatan.setBackgroundResource(R.drawable.button_nonactive)
             binding.group1.visibility = View.GONE
             binding.group2.visibility = View.VISIBLE
+            binding.group3.visibility = View.GONE
+        }
+
+        binding.btKegiatan.setOnClickListener{
+            binding.btAktivitas.setBackgroundResource(R.drawable.button_nonactive)
+            binding.btKonsumsi.setBackgroundResource(R.drawable.button_nonactive)
+            binding.btKegiatan.setBackgroundResource(R.drawable.button_active)
+            binding.group1.visibility = View.GONE
+            binding.group2.visibility = View.GONE
+            binding.group3.visibility = View.VISIBLE
         }
     }
 
@@ -94,9 +117,8 @@ class HomeFragment : Fragment() {
         animator3.start()
     }
 
-    // recyclerView
-    private fun setAdapter() {
-        // recyclerView1
+    // recyclerView 1
+    private fun setAdapter1() {
         val dataList: MutableList<Model1> = mutableListOf()
         // memecahkan value dataList
         judul().forEachIndexed { index, name ->
@@ -106,6 +128,32 @@ class HomeFragment : Fragment() {
         // binding recyclerView1
         adapter1 = Adapter1(dataList)
         binding.recyclerView1.adapter = adapter1
+    }
+
+    // recyclerView 2
+    private fun setAdapter2() {
+        val dataList: MutableList<Model2> = mutableListOf()
+        // memcahkan value dataList
+        image3().forEachIndexed {index, name->
+            dataList.add(Model2(name, deskripsi1()[index]))
+        }
+
+        // binding recyclerView2
+        adapter2 = Adapter2(dataList)
+        binding.recyclerView2.adapter = adapter2
+    }
+
+    // recyclerView 3
+    private fun setAdapter3() {
+        val dataList: MutableList<Model3> = mutableListOf()
+        // memcahkan value dataList
+        image4().forEachIndexed {index, name->
+            dataList.add(Model3(name, deskripsi2()[index]))
+        }
+
+        // binding recyclerView2
+        adapter3 = Adapter3(dataList)
+        binding.recyclerView3.adapter = adapter3
     }
 
     // recyclerView1 function
@@ -124,4 +172,23 @@ class HomeFragment : Fragment() {
     )
     private fun subjudul2(): Array<String> = resources.getStringArray(R.array.subjudul2)
     private fun kkal2(): Array<String> = resources.getStringArray(R.array.kkal2)
+
+    // recyclerView2 function
+    private fun image3(): List<Int> = listOf(
+        R.drawable.resep1,
+        R.drawable.resep2,
+        R.drawable.resep3,
+        R.drawable.resep4
+    )
+    private fun deskripsi1(): Array<String> = resources.getStringArray(R.array.deskripsi1)
+
+    // recyclerView3 function
+    private fun image4(): List<Int> = listOf(
+        R.drawable.artikel1,
+        R.drawable.artikel2,
+        R.drawable.artikel3,
+        R.drawable.artikel4
+    )
+    private fun deskripsi2(): Array<String> = resources.getStringArray(R.array.deskripsi2)
+
 }

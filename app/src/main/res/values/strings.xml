@@ -101,6 +101,17 @@
     <!--Animation precentage-->
     <string name="percentage">60%</string>
 
-    <!--group2-->
+    <!--group3-->
+    <!--text-->
+    <string name="minum">+Minum</string>
+    <string name="jogging_30_menit">Jogging | 30 Menit</string>
+    <string name="mulai">Mulai</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="test">test</string>
 
+    <!-- Area2 -->
+    <string name="resep_makanan">Resep makanan</string>
+
+    <!-- Area3 -->
+    <string name="artikel">Artikel</string>
 </resources>
