@@ -33,18 +33,18 @@
 
     <!-- Group2 Home -->
     <string-array name="deskripsi1">
-        <item>Resep Kosong !!!!</item>
-        <item>Resep Kosong !!!!</item>
-        <item>Resep Kosong !!!!</item>
-        <item>Resep Kosong !!!!</item>
+        <item>5 perilaku hidup sehat yang dapat di mulai dari keluarga</item>
+        <item>6 cara mudah menjaga gaya hidup sehat</item>
+        <item>Diet tanpa menyiksa, ini paduan melakukan diet DEBM</item>
+        <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
     </string-array>
 
     <!-- Group3 Home -->
     <string-array name="deskripsi2">
-        <item>Artikel Kosong !!!!</item>
-        <item>Artikel Kosong !!!!</item>
-        <item>Artikel Kosong !!!!</item>
-        <item>Artikel Kosong !!!!</item>
+        <item>5 perilaku hidup sehat yang dapat di mulai dari keluarga</item>
+        <item>6 cara mudah menjaga gaya hidup sehat</item>
+        <item>Diet tanpa menyiksa, ini paduan melakukan diet DEBM</item>
+        <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
     </string-array>
 
 </resources>
