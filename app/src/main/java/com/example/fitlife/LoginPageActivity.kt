@@ -26,6 +26,7 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
         //menambah onclicklistener
         binding.btnSignIn.setOnClickListener(this)
         binding.loginToSignup.setOnClickListener(this)
+        binding.tvLupaKataSandi.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -52,8 +53,14 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
 
                 if (!isInputErrLog){
                     //Mengirim intent ke dashboard
+                    val intent = Intent(this@LoginPageActivity, RegisterProfilePageActivity::class.java)
+                    startActivity(intent)
 
                 }
+            }
+            binding.tvLupaKataSandi ->{
+                val intent = Intent(this@LoginPageActivity, EditPasswordPageActivity::class.java)
+                startActivity(intent)
             }
             binding.loginToSignup -> {
                 val intent = Intent(this@LoginPageActivity, RegisterPageAcrivity::class.java)
