@@ -47,4 +47,43 @@
         <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
     </string-array>
 
+    <!-- Drink page -->
+    <string-array name="judul2">
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+    </string-array>
+
+    <string-array name="subjudul3">
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+    </string-array>
+
+    <string-array name="subjudul4">
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+    </string-array>
 </resources>

@@ -115,6 +115,9 @@
     <!-- Area3 -->
     <string name="artikel">Artikel</string>
 
-    <!-- Perubahan baru -->
+    <!-- Drink page -->
+    <string name="boiled_chicken">Boiled Chicken</string>
+    <string name="_100_kcal">100 Kcal</string>
+    <string name="_100_mins">100 mins</string>
 
 </resources>
