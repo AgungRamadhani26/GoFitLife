@@ -62,7 +62,7 @@ class RegisterPageAcrivity : AppCompatActivity(), View.OnClickListener {
                     bundle.putString("email", inputEmail)
 
                     //Mengirim intent ke login page
-                    val intent = Intent(this@RegisterPageAcrivity, RegisterProfilePageActivity::class.java)
+                    val intent = Intent(this@RegisterPageAcrivity, LoginPageActivity::class.java)
                     intent.putExtras(bundle)
                     startActivity(intent)
                 }

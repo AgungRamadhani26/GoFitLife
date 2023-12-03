@@ -94,4 +94,44 @@
         <item>Makanan sehat ga perlu mahal</item>
         <item>Makanan sehat itu murah</item>
     </string-array>
+
+    <!--home-->
+
+    <!--Area1-->
+    <!--Button-->
+    <string name="terbakar">Terbakar</string>
+    <string name="target">Target</string>
+    <string name="konsumsi">Konsumsi</string>
+    <!--Image description-->
+    <string name="greencard">greenCard</string>
+
+    <!--group1-->
+    <!--text-->
+    <string name="aktivitas">Aktivitas</string>
+    <string name="sisa">Sisa</string>
+    <string name="_1000_kcal">1000 KCAL</string>
+    <string name="_400_kcal">400 kcal</string>
+    <string name="_600_kcal">600 KCAL</string>
+    <string name="kegiatan">Kegiatan</string>
+    <!--Animation precentage-->
+    <string name="percentage">60%</string>
+
+    <!--group3-->
+    <!--text-->
+    <string name="minum">+Minum</string>
+    <string name="jogging_30_menit">Jogging | 30 Menit</string>
+    <string name="mulai">Mulai</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="test">test</string>
+
+    <!-- Area2 -->
+    <string name="resep_makanan">Resep makanan</string>
+
+    <!-- Area3 -->
+    <string name="artikel">Artikel</string>
+
+    <!-- Drink page -->
+    <string name="boiled_chicken">Boiled Chicken</string>
+    <string name="_100_kcal">100 Kcal</string>
+    <string name="_100_mins">100 mins</string>
 </resources>

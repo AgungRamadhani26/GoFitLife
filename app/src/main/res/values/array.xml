@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Group1 Home -->
+    <string-array name="judul">
+        <item>Sarapan</item>
+        <item>Makan Siang</item>
+        <item>Makan Malam</item>
+    </string-array>
+
+    <string-array name="subjudul1">
+        <item>Omelete sandwidch</item>
+        <item>Tofu with egg</item>
+        <item>Chicken with corn</item>
+    </string-array>
+
+    <string-array name="kkal1">
+        <item>333 KKAL | 20 menit</item>
+        <item>140 KKAL | 20 menit</item>
+        <item>223 KKAL | 20 menit</item>
+    </string-array>
+
+    <string-array name="subjudul2">
+        <item>Apple</item>
+        <item>Grapes</item>
+        <item>Banana</item>
+    </string-array>
+
+    <string-array name="kkal2">
+        <item>14 KKAL</item>
+        <item>89 KKAL</item>
+        <item>62 KKAL</item>
+    </string-array>
+
+    <!-- Group2 Home -->
+    <string-array name="deskripsi1">
+        <item>5 perilaku hidup sehat yang dapat di mulai dari keluarga</item>
+        <item>6 cara mudah menjaga gaya hidup sehat</item>
+        <item>Diet tanpa menyiksa, ini paduan melakukan diet DEBM</item>
+        <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
+    </string-array>
+
+    <!-- Group3 Home -->
+    <string-array name="deskripsi2">
+        <item>5 perilaku hidup sehat yang dapat di mulai dari keluarga</item>
+        <item>6 cara mudah menjaga gaya hidup sehat</item>
+        <item>Diet tanpa menyiksa, ini paduan melakukan diet DEBM</item>
+        <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
+    </string-array>
+
+    <!-- Drink page -->
+    <string-array name="judul2">
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+        <item>Boiled Chicken</item>
+    </string-array>
+
+    <string-array name="subjudul3">
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+    </string-array>
+
+    <string-array name="subjudul4">
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+        <item>100 mins</item>
+    </string-array>
+</resources>

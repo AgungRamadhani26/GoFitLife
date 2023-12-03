@@ -15,8 +15,12 @@
         android:theme="@style/Theme.FitLife"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
+            android:name=".EditPasswordPageActivity"
             android:exported="false" />
+        <activity
+            android:name=".BottomNavbarActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".RegisterProfilePageActivity"
             android:exported="false" />
@@ -27,11 +31,12 @@
             android:name=".RegisterPageAcrivity"
             android:exported="false" />
         <activity
-            android:name=".EditPasswordPageActivity"
+            android:name=".EditInformasiPribadiActivity"
             android:exported="false" />
         <activity
-            android:name=".BottomNavbarActivity"
-            android:exported="true">
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
