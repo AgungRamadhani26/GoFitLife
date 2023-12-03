@@ -1,4 +1,4 @@
-package com.example.fitlife.Article
+package com.example.fitlife.models
 
 data class Article(
     var thumbnail: Int,

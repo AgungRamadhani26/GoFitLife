@@ -1,29 +1,34 @@
 package com.example.fitlife.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.fitlife.Article.Article
-import com.example.fitlife.Article.ArticleAdapter
+import com.example.fitlife.models.Article
+import com.example.fitlife.adapters.ArticleAdapter
 import com.example.fitlife.R
-import com.example.fitlife.databinding.FragmentDrinkBinding
 import com.example.fitlife.databinding.FragmentGlobeBinding
 
 class GlobeFragment : Fragment() {
     private lateinit var articleArrayList: ArrayList<Article>
     private lateinit var binding: FragmentGlobeBinding
     private lateinit var articleAdapter: ArticleAdapter
-    private var articleHeadlines: Array<String> = resources.getStringArray(R.array.articleHeadline)
-    private var articleExcerpts: Array<String> = resources.getStringArray(R.array.articleExcerpt)
-    private var articleThumbnails: IntArray = resources.getIntArray(R.array.articleThumbnail)
+    private lateinit var articleHeadlines: Array<String>
+    private lateinit var articleExcerpts: Array<String>
+    private lateinit var articleThumbnails: IntArray
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // inflate
         binding = FragmentGlobeBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        // get Array
+        articleHeadlines = resources.getStringArray(R.array.articleHeadline)
+        articleExcerpts = resources.getStringArray(R.array.articleExcerpt)
+        articleThumbnails = resources.getIntArray(R.array.articleThumbnail)
+        Log.d("article", "onCreateView: $articleThumbnails")
 
         // recycler view
         articleArrayList = arrayListOf<Article>()
