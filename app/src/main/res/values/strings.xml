@@ -66,19 +66,34 @@
     <string name="user_alt">User_alt</string>
 
     <!-- Login Page -->
-    <string name="user_alt_greeting" translatable="false">Hari yang indah, katemills</string>
-    <string name="profil_pengaturanAkun" translatable="false">Pengaturan Akun</string>
-    <string name="profil_info_namaPengguna" translatable="false">Nama pengguna</string>
-    <string name="profil_namaPengguna" translatable="false">dheaic_17</string>
-    <string name="profil_info_namaPanggilan" translatable="false">Nama panggilan</string>
-    <string name="profil_namaPanggilan" translatable="false">dhea ice</string>
-    <string name="profil_info_email" translatable="false">Email</string>
-    <string name="profil_email" translatable="false">chadellea@gma...</string>
-    <string name="profil_info_jenisKelamin" translatable="false">Jenis kelamin</string>
-    <string name="profil_jenisKelamin" translatable="false">Pria</string>
-    <string name="profil_notifikasi_makan" translatable="false">Pengingat makan dan minum</string>
-    <string name="profil_notifikasi_olahraga" translatable="false">Pengingat olahraga</string>
-    <string name="keluar" translatable="false">keluar</string>
+    <string name="user_alt_greeting">Hari yang indah, dheaic_17</string>
+    <string name="profil_pengaturanAkun">Pengaturan Akun</string>
+    <string name="profil_info_namaPengguna">Nama pengguna</string>
+    <string name="profil_namaPengguna">dheaic_17</string>
+    <string name="profil_info_namaPanggilan">Nama panggilan</string>
+    <string name="profil_namaPanggilan">dhea ice</string>
+    <string name="profil_info_email">Email</string>
+    <string name="profil_email">chadellea@gma...</string>
+    <string name="profil_info_jenisKelamin">Jenis kelamin</string>
+    <string name="profil_jenisKelamin">Pria</string>
+    <string name="profil_notifikasi_makan">Pengingat makan dan minum</string>
+    <string name="profil_notifikasi_olahraga">Pengingat olahraga</string>
+    <string name="keluar">keluar</string>
+
+    <!-- Article Page -->
+    <string name="article">Artikel Kesehatan</string>
+    <integer-array name="articleThumbnail">
+        <item>@drawable/fit_life</item>
+        <item>@drawable/fit_life</item>
+    </integer-array>
+    <string-array name="articleHeadline">
+        <item>Makanan sehat ga perlu mahal</item>
+        <item>Makanan sehat itu murah</item>
+    </string-array>
+    <string-array name="articleExcerpt">
+        <item>Makanan sehat ga perlu mahal</item>
+        <item>Makanan sehat itu murah</item>
+    </string-array>
 
     <!--home-->
 
@@ -119,5 +134,4 @@
     <string name="boiled_chicken">Boiled Chicken</string>
     <string name="_100_kcal">100 Kcal</string>
     <string name="_100_mins">100 mins</string>
-
 </resources>
