@@ -1,11 +1,14 @@
 package com.example.fitlife.Fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitlife.models.Article
 import com.example.fitlife.adapters.ArticleAdapter
@@ -18,7 +21,7 @@ class GlobeFragment : Fragment() {
     private lateinit var articleAdapter: ArticleAdapter
     private lateinit var articleHeadlines: Array<String>
     private lateinit var articleExcerpts: Array<String>
-    private lateinit var articleThumbnails: IntArray
+    private lateinit var articleThumbnails: List<Int>
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // inflate
         binding = FragmentGlobeBinding.inflate(inflater, container, false)
@@ -27,7 +30,11 @@ class GlobeFragment : Fragment() {
         // get Array
         articleHeadlines = resources.getStringArray(R.array.articleHeadline)
         articleExcerpts = resources.getStringArray(R.array.articleExcerpt)
-        articleThumbnails = resources.getIntArray(R.array.articleThumbnail)
+        articleThumbnails = listOf(
+            R.drawable.artikel1,
+            R.drawable.artikel2,
+            R.drawable.artikel3,
+        )
 
         // recycler view
         articleArrayList = arrayListOf<Article>()
@@ -39,7 +46,31 @@ class GlobeFragment : Fragment() {
         articleAdapter = ArticleAdapter(articleArrayList)
         binding.rvArticle.adapter = articleAdapter
 
+        // Menambahkan OnTouchListener ke ConstraintLayout
+        binding.scrollView.setOnTouchListener { _, event ->
+            // Memeriksa apakah sentuhan terjadi di luar EditText dan RecyclerView
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                val imm =
+                    context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                if (binding.etSearch.isFocused) {
+                    val outRectEditText = android.graphics.Rect()
+                    binding.etSearch.getGlobalVisibleRect(outRectEditText)
+                    if (!outRectEditText.contains(event.rawX.toInt(), event.rawY.toInt())) {
+                        // Menutup keyboard karena sentuhan terjadi di luar EditText
+                        imm.hideSoftInputFromWindow(binding.etSearch.windowToken, 0)
+                        binding.etSearch.clearFocus()
+                    }
+                }
+            }
+            return@setOnTouchListener false
+        }
+
         return view
+    }
+
+    private fun hideKeyboard(view: View) {
+        val imm = context?.getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun getArticleData() {
