@@ -28,7 +28,6 @@ class GlobeFragment : Fragment() {
         articleHeadlines = resources.getStringArray(R.array.articleHeadline)
         articleExcerpts = resources.getStringArray(R.array.articleExcerpt)
         articleThumbnails = resources.getIntArray(R.array.articleThumbnail)
-        Log.d("article", "onCreateView: $articleThumbnails")
 
         // recycler view
         articleArrayList = arrayListOf<Article>()

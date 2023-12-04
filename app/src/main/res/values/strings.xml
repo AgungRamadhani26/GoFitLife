@@ -83,14 +83,17 @@
     <!-- Article Page -->
     <string name="article">Artikel Kesehatan</string>
     <integer-array name="articleThumbnail">
-        <item>@drawable/fit_life</item>
-        <item>@drawable/fit_life</item>
+        <item>@drawable/artikel1</item>
+        <item>@drawable/artikel2</item>
+        <item>@drawable/artikel2</item>
     </integer-array>
     <string-array name="articleHeadline">
         <item>Makanan sehat ga perlu mahal</item>
         <item>Makanan sehat itu murah</item>
+        <item>Makanan sehat ga perlu mahal</item>
     </string-array>
     <string-array name="articleExcerpt">
+        <item>Makanan sehat itu murah</item>
         <item>Makanan sehat ga perlu mahal</item>
         <item>Makanan sehat itu murah</item>
     </string-array>
