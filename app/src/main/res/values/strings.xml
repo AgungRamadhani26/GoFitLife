@@ -1,140 +1,151 @@
 <resources>
     <string name="app_name">GoFitLife</string>
     <string name="splash_name">GoFitLife</string>
-    <string name="welcome">Selamat datang</string>
-    <string name="reg_capt">Isi data diri Anda disini!</string>
-    <string name="tv_nama">Nama</string>
+    <string name="welcome">Welcome</string>
+    <string name="reg_capt">Fill in your personal information here!</string>
+    <string name="tv_nama">Name</string>
     <string name="tv_email">Email</string>
     <string name="tv_password">Password</string>
-    <string name="tv_konf_password">Konfirmasi Password</string>
-    <string name="remember">Reminder Me</string>
-    <string name="signup">Daftar</string>
-    <string name="signin">Login</string>
-    <string name="lupa_password">Lupa kata sandi</string>
-    <string name="dy_have_acc">Apakah anda memiliki akun ?</string>
-    <string name="title_activity_login_page">AktivitasHalamanLogin</string>
+    <string name="tv_konf_password">Confirm Password</string>
+    <string name="remember">Remember Me</string>
+    <string name="signup">Sign Up</string>
+    <string name="signin">Sign In</string>
+    <string name="lupa_password">Forgot Password</string>
+    <string name="dy_have_acc">Do you have an account?</string>
+    <string name="title_activity_login_page">LoginPageActivity</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Kata sandi</string>
-    <string name="action_sign_in">Masuk atau daftar</string>
-    <string name="action_sign_in_short">Masuk</string>
-    <string name="invalid_username">Bukan nama pengguna yang valid</string>
-    <string name="invalid_password">Kata sandi minimal 5 karakter</string>
-    <string name="login_failed">"Login gagal"</string>
-    <string name="log_capt">Apakah aku mengenalmu?</string>
-    <string name="sign_in">Masuk</string>
-    <string name="dny_have_acc">Apakah kamu tidak mempunyai akun ?</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In or Sign Up</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="log_capt">Do I know you?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dny_have_acc">Dont have an account?</string>
+    <string name="login_failed">Login failed</string>
 
-    <!--    perubahan baru-->
-    <string name="hallo">Hallo</string>
-    <string name="reg_prof_capt">Silahkan isi data diri anda</string>
-    <string name="foto_profil">Foto profil</string>
-    <string name="jenis_kelamin">Jenis kelamin</string>
-    <string name="laki">Laki-laki</string>
-    <string name="perempuan">Perempuan</string>
-    <string name="tanggal_lahir">Tanggal lahir</string>
+    <!--- alert -->
+    <string name="invalid_username">Invalid username</string>
+    <string name="invalid_password">Password must be at least 5 characters</string>
+    <string name="email_require">Field email must be filled</string>
+    <string name="invalid_email_format">Invalid email format</string>
+    <string name="password_require">Password must be filled</string>
+    <string name="confirm_password_required">Confirmation password must be filled</string>
+    <string name="password_mismatch">Confirmation password does not match the password</string>
+
+    <!-- New changes -->
+    <string name="hallo">Hello</string>
+    <string name="reg_prof_capt">Please fill in your personal information</string>
+    <string name="foto_profil">Profile Picture</string>
+    <string name="jenis_kelamin">Gender</string>
+    <string name="laki">Male</string>
+    <string name="perempuan">Female</string>
+    <string name="tanggal_lahir">Date of Birth</string>
     <string name="hari_bulan_tahun">dd/mm/yyyy</string>
-    <string name="tinggi_badan">Tinggi badan</string>
-    <string name="berat_badan">Berat badan</string>
-    <string name="tingkat_aktivitas">Tingkat aktivitas</string>
-    <string name="aktif">Aktif</string>
-    <string name="aktif_ringan">Aktif ringan</string>
-    <string name="cukup_aktif">Cukup aktif</string>
-    <string name="sangat_aktif">Sangat aktif</string>
-    <string name="extra_aktif">Extra aktif</string>
-    <string name="simpan">Simpan</string>
+    <string name="tinggi_badan">Height</string>
+    <string name="berat_badan">Weight</string>
+    <string name="tingkat_aktivitas">Activity Level</string>
+    <string name="aktif">Active</string>
+    <string name="aktif_ringan">Lightly Active</string>
+    <string name="cukup_aktif">Moderately Active</string>
+    <string name="sangat_aktif">Very Active</string>
+    <string name="extra_aktif">Extra Active</string>
+    <string name="simpan">Save</string>
 
-    <!--    Perubahan baru-->
-    <string name="edit_informasi_pribadi">Edit Informasi Pribadi</string>
-    <string name="informasi_rahasia">Informasi Rahasia</string>
-    <string name="jangan_kasi_tahu">Ssst! jangan kasih tau siapa-siapa.</string>
-    <string name="password_lama">Password lama</string>
-    <string name="password_baru">Password Baru</string>
-    <string name="konfirmasi_password">Konfirmasi password</string>
+    <!-- New changes -->
+    <string name="edit_informasi_pribadi">Edit Personal Information</string>
+    <string name="informasi_rahasia">Secret Information</string>
+    <string name="jangan_kasi_tahu">Shh! Dont tell anyone.</string>
+    <string name="password_lama">Old Password</string>
+    <string name="password_baru">New Password</string>
+    <string name="konfirmasi_password">Confirm Password</string>
 
-    <!--Perubahan baru-->
-    <string name="informasi_pribadi">Informasi Pribadi</string>
-    <string name="bisa_ubah_info_diri">Disini kamu bisa mengubah informasi dirimu loh!</string>
+    <!-- New changes -->
+    <string name="informasi_pribadi">Personal Information</string>
+    <string name="bisa_ubah_info_diri">Here you can change your information!</string>
     <string name="username">Username</string>
-    <string name="nama_panggilan">Nama panggilan</string>
+    <string name="nama_panggilan">Nickname</string>
 
-
-    <!--Bottom Navbar-->
+    <!-- Bottom Navbar -->
     <string name="home">Home</string>
     <string name="drink">Drink</string>
     <string name="clock">Clock</string>
     <string name="globe">Globe</string>
-    <string name="user_alt">User_alt</string>
+    <string name="user_alt">User</string>
 
     <!-- Login Page -->
-    <string name="user_alt_greeting">Hari yang indah, dheaic_17</string>
-    <string name="profil_pengaturanAkun">Pengaturan Akun</string>
-    <string name="profil_info_namaPengguna">Nama pengguna</string>
+    <string name="user_alt_greeting">Beautiful day, dheaic_17</string>
+    <string name="profil_pengaturanAkun">Account Settings</string>
+    <string name="profil_info_namaPengguna">Username</string>
     <string name="profil_namaPengguna">dheaic_17</string>
-    <string name="profil_info_namaPanggilan">Nama panggilan</string>
+    <string name="profil_info_namaPanggilan">Nickname</string>
     <string name="profil_namaPanggilan">dhea ice</string>
     <string name="profil_info_email">Email</string>
     <string name="profil_email">chadellea@gma...</string>
-    <string name="profil_info_jenisKelamin">Jenis kelamin</string>
-    <string name="profil_jenisKelamin">Pria</string>
-    <string name="profil_notifikasi_makan">Pengingat makan dan minum</string>
-    <string name="profil_notifikasi_olahraga">Pengingat olahraga</string>
-    <string name="keluar">keluar</string>
+    <string name="profil_info_jenisKelamin">Gender</string>
+    <string name="profil_jenisKelamin">Male</string>
+    <string name="profil_notifikasi_makan">Meal and Drink Reminders</string>
+    <string name="profil_notifikasi_olahraga">Exercise Reminder</string>
+    <string name="keluar">Sign Out</string>
 
     <!-- Article Page -->
-    <string name="article">Artikel Kesehatan</string>
+    <string name="article">Health Articles</string>
     <integer-array name="articleThumbnail">
         <item>@drawable/artikel1</item>
         <item>@drawable/artikel2</item>
         <item>@drawable/artikel2</item>
     </integer-array>
     <string-array name="articleHeadline">
-        <item>Makanan sehat ga perlu mahal</item>
-        <item>Makanan sehat itu murah</item>
-        <item>Makanan sehat ga perlu mahal</item>
+        <item>Healthy food doesnt need to be expensive</item>
+        <item>Healthy food is affordable</item>
+        <item>Healthy food doesnt need to be expensive</item>
     </string-array>
     <string-array name="articleExcerpt">
-        <item>Makanan sehat itu murah</item>
-        <item>Makanan sehat ga perlu mahal</item>
-        <item>Makanan sehat itu murah</item>
+        <item>Healthy food is affordable</item>
+        <item>Healthy food doesnt need to be expensive</item>
+        <item>Healthy food is affordable</item>
     </string-array>
 
-    <!--home-->
+    <!-- Home -->
 
-    <!--Area1-->
-    <!--Button-->
-    <string name="terbakar">Terbakar</string>
+    <!-- Area 1 -->
+    <!-- Buttons -->
+    <string name="terbakar">Burned</string>
     <string name="target">Target</string>
-    <string name="konsumsi">Konsumsi</string>
-    <!--Image description-->
-    <string name="greencard">greenCard</string>
+    <string name="konsumsi">Consumption</string>
+    <!-- Image descriptions -->
+    <string name="greencard">Green Card</string>
 
-    <!--group1-->
-    <!--text-->
-    <string name="aktivitas">Aktivitas</string>
-    <string name="sisa">Sisa</string>
+    <!-- Group 1 -->
+    <!-- Text -->
+    <string name="aktivitas">Activity</string>
+    <string name="sisa">Remaining</string>
     <string name="_1000_kcal">1000 KCAL</string>
-    <string name="_400_kcal">400 kcal</string>
+    <string name="_400_kcal">400 KCAL</string>
     <string name="_600_kcal">600 KCAL</string>
-    <string name="kegiatan">Kegiatan</string>
-    <!--Animation precentage-->
-    <string name="percentage">60%</string>
+    <string name="kegiatan">Activity</string>
+    <!-- Animation percentages -->
+    <string name="_60">60%</string>
 
-    <!--group3-->
-    <!--text-->
-    <string name="minum">+Minum</string>
-    <string name="jogging_30_menit">Jogging | 30 Menit</string>
-    <string name="mulai">Mulai</string>
-    <string name="lihat_semua">Lihat semua</string>
-    <string name="test">test</string>
+    <!-- Group 3 -->
+    <!-- Text -->
+    <string name="minum">+Drink</string>
+    <string name="jogging_30_menit">Jogging | 30 Minutes</string>
+    <string name="mulai">Start</string>
+    <string name="lihat_semua">See All</string>
+    <string name="test">Test</string>
+    <string name="total_kalori_761_kkal">Total calories: 761 KCAL</string>
 
-    <!-- Area2 -->
-    <string name="resep_makanan">Resep makanan</string>
+    <!-- Area 2 -->
+    <string name="resep_makanan">Food Recipes</string>
 
-    <!-- Area3 -->
-    <string name="artikel">Artikel</string>
+    <!-- Area 3 -->
+    <string name="artikel">Articles</string>
 
-    <!-- Drink page -->
+    <!-- Drink Page -->
     <string name="boiled_chicken">Boiled Chicken</string>
-    <string name="_100_kcal">100 Kcal</string>
+    <string name="_100_kcal">100 KCAL</string>
     <string name="_100_mins">100 mins</string>
+    <string name="resep">Recipe</string>
+    <string name="rekomendasi_makanan">Food Recommendations</string>
+    <string name="search">Search</string>
+    <string name="artikel_kesehatan_untukmu">Health Articles for You</string>
 </resources>

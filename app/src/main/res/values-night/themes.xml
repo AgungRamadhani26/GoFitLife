@@ -2,9 +2,15 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FitLife" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/greenPrimary</item>
 
         <!-- Font Poppins -->
         <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Theme.FitLife" parent="Base.Theme.FitLife" />
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/greenSecondary</item>
     </style>
 </resources>

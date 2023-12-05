@@ -1,11 +1,15 @@
 package com.example.fitlife
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.Spinner
 import com.example.fitlife.databinding.ActivityRegisterPageBinding
 import com.example.fitlife.databinding.ActivityRegisterProfilePageBinding
@@ -47,6 +51,8 @@ class RegisterProfilePageActivity : AppCompatActivity(), View.OnClickListener {
                 // Handle ketika tidak ada item yang dipilih
             }
         }
+
+        keyboardAction()
     }
 
     override fun onClick(v: View?) {
@@ -54,6 +60,28 @@ class RegisterProfilePageActivity : AppCompatActivity(), View.OnClickListener {
             binding.btnSimpan -> {
                 val intent = Intent(this@RegisterProfilePageActivity, BottomNavbarActivity::class.java)
                 startActivity(intent)
+            }
+        }
+    }
+    private fun keyboardAction() {
+        binding.container.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                hideKeyboardAndClearFocus(binding.etNama, event)
+                hideKeyboardAndClearFocus(binding.etTanggalLahir, event)
+                hideKeyboardAndClearFocus(binding.etTinggiBadan, event)
+                hideKeyboardAndClearFocus(binding.etBeratBadan, event)
+            }
+            return@setOnTouchListener false
+        }
+    }
+    private fun hideKeyboardAndClearFocus(editText: EditText, event: MotionEvent) {
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        if (editText.isFocused) {
+            val outRectEditText = android.graphics.Rect()
+            editText.getGlobalVisibleRect(outRectEditText)
+            if (!outRectEditText.contains(event.rawX.toInt(), event.rawY.toInt())) {
+                imm.hideSoftInputFromWindow(editText.windowToken, 0)
+                editText.clearFocus()
             }
         }
     }
