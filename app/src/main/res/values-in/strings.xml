@@ -149,4 +149,15 @@
     <string name="rekomendasi_makanan">Rekomendasi Makanan</string>
     <string name="search">Search</string>
     <string name="artikel_kesehatan_untukmu">Artikel kesehatan untukmu</string>
+
+    <!--Clock page-->
+    <string name="rencana">Rencana</string>
+    <string name="rencana_saya">Rencana Saya</string>
+    <string name="buat_rencana">Buat rencana</string>
+    <string name="today">Today</string>
+    <string name="waktu_mkn">Waktu Makan</string>
+    <string name="nama_makanan1">Nama makanan1</string>
+    <string name="nama_makanan2">Nama makanan2</string>
+    <string name="jlh_kalori1">Jumlah kalori1</string>
+    <string name="jlh_kalori2">Jumlah kalori2</string>
 </resources>

@@ -12,4 +12,5 @@
     <color name="grey5">#EFEFEF</color>
     <color name="tranparant">#95FFFFFF</color>
     <color name="greenyellow">#7ACE72</color>
+    <color name="no_color">#00000000</color>
 </resources>
