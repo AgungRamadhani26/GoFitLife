@@ -13,7 +13,7 @@ class RencanaMakanAdapter(private val list: List<Model1>): RecyclerView.Adapter<
     class ViewHolder(val binding: ItemRencanaMakananBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = com.example.fitlife.databinding.ItemRencanaMakananBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemRencanaMakananBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

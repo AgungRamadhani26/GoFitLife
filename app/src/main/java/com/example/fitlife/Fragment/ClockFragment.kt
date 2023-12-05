@@ -6,15 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.fitlife.R
+import com.example.fitlife.adapters.OlahragaAdapter
 import com.example.fitlife.adapters.RencanaMakanAdapter
 import com.example.fitlife.databinding.FragmentClockBinding
 import com.example.fitlife.models.Model1
+import com.example.fitlife.models.Olahraga
 
 class ClockFragment : Fragment() {
     //binding fragment clock
     private lateinit var binding: FragmentClockBinding
-    // RecyclerView 1
+    // RecyclerView makanan
     private lateinit var rencanaMknAdp: RencanaMakanAdapter
+    // RecyclerView Olahraga
+    private lateinit var olahragaAdp: OlahragaAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // inflate
@@ -43,11 +47,12 @@ class ClockFragment : Fragment() {
 
         // initialitation function recyclerView
         setRencanaMakanAdapter()
+        setOlahragaAdapter()
 
         return view
     }
 
-    // recyclerView 1
+    // recyclerView makanan
     private fun setRencanaMakanAdapter() {
         val dataList: MutableList<Model1> = mutableListOf()
         // memecahkan value dataList
@@ -60,7 +65,20 @@ class ClockFragment : Fragment() {
         binding.rvMakanan.adapter = rencanaMknAdp
     }
 
-    // recyclerView1 function
+    // recyclerView olahraga
+    private fun setOlahragaAdapter(){
+        val dataList: MutableList<Olahraga> = mutableListOf()
+        // memecah value datalist
+        namaOlahraga().forEachIndexed { index, name ->
+            dataList.add(Olahraga(name, imageOlahraga()[index],lamaWaktuOlahraga()[index], waktuOlahraga()[index]))
+        }
+
+        // binding rvMakan
+        olahragaAdp = OlahragaAdapter(dataList)
+        binding.rvOlahraga.adapter = olahragaAdp
+    }
+
+    // recyclerView makanan function
     private fun judul(): Array<String> = resources.getStringArray(R.array.judul)
     private fun image1(): List<Int> = listOf(
         R.drawable.food1,
@@ -77,4 +95,13 @@ class ClockFragment : Fragment() {
     private fun subjudul2(): Array<String> = resources.getStringArray(R.array.subjudul2)
     private fun kkal2(): Array<String> = resources.getStringArray(R.array.kkal2)
 
+
+    // recyclerView olahraga function
+    private fun namaOlahraga(): Array<String> = resources.getStringArray(R.array.nama_olahraga)
+    private fun imageOlahraga(): List<Int> = listOf(
+        R.drawable.olahraga_1,
+        R.drawable.olahraga_2
+    )
+    private fun lamaWaktuOlahraga(): Array<String> = resources.getStringArray(R.array.lamawaktu_olahraga)
+    private fun waktuOlahraga(): Array<String> = resources.getStringArray(R.array.waktu_olahraga)
 }

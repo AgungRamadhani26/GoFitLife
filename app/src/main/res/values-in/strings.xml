@@ -160,4 +160,9 @@
     <string name="nama_makanan2">Nama makanan2</string>
     <string name="jlh_kalori1">Jumlah kalori1</string>
     <string name="jlh_kalori2">Jumlah kalori2</string>
+    <string name="minumku">Minum</string>
+    <string name="olahraga">Olahraga</string>
+    <string name="jogging">Jogging</string>
+    <string name="lama_olahraga">30 Menit</string>
+    <string name="waktu_olahraga">07.00</string>
 </resources>
