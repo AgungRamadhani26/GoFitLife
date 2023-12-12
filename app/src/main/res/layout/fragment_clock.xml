@@ -1,16 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".fragment.ClockFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/clock"
-        android:textColor="@color/black"
-        android:layout_margin="10dp"/>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_rencana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/rencana"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:background="@drawable/glass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rencana"
+            app:layout_constraintVertical_bias="0.5"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRencanaSaya"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_theme_2"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/rencana_saya"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnBuatRencana"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/no_color"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/buat_rencana"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/today"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_makanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today"
+            tools:listitem="@layout/item_rencana_makanan" />
+
+        <View
+            android:id="@+id/garis1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="18dp"
+            android:background="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_makanan" />
+
+        <TextView
+            android:id="@+id/tv_Minum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/minumku"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_today"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="@id/tv_today"
+            app:layout_constraintTop_toBottomOf="@+id/garis1" />
+
+        <!-- Group3 -->
+        <FrameLayout
+            android:id="@+id/fl_minum"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/rv_makanan"
+            app:layout_constraintStart_toStartOf="@id/rv_makanan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Minum">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp">
+                <!--Icon gelas baris 1-->
+                <ImageView
+                    android:id="@+id/gelas_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/glass_full"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Icon gelas baris 2-->
+
+                <ImageView
+                    android:id="@+id/gelas_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintBottom_toBottomOf="@id/gelas_1"
+                    app:layout_constraintStart_toEndOf="@id/gelas_1"
+                    app:layout_constraintTop_toTopOf="@id/gelas_1" />
+
+                <ImageView
+                    android:id="@+id/gelas_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintBottom_toBottomOf="@id/gelas_2"
+                    app:layout_constraintStart_toEndOf="@id/gelas_2"
+                    app:layout_constraintTop_toTopOf="@id/gelas_2" />
+
+                <ImageView
+                    android:id="@+id/gelas_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintBottom_toBottomOf="@id/gelas_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toEndOf="@id/gelas_3"
+                    app:layout_constraintTop_toTopOf="@id/gelas_3" />
+
+                <ImageView
+                    android:id="@+id/gelas_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintEnd_toEndOf="@id/gelas_1"
+                    app:layout_constraintStart_toStartOf="@+id/gelas_1"
+                    app:layout_constraintTop_toBottomOf="@+id/gelas_1" />
+
+
+                <ImageView
+                    android:id="@+id/gelas_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintEnd_toEndOf="@id/gelas_2"
+                    app:layout_constraintStart_toStartOf="@+id/gelas_2"
+                    app:layout_constraintTop_toBottomOf="@+id/gelas_2" />
+
+                <ImageView
+                    android:id="@+id/gelas_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintEnd_toEndOf="@id/gelas_3"
+                    app:layout_constraintStart_toStartOf="@+id/gelas_3"
+                    app:layout_constraintTop_toBottomOf="@+id/gelas_3" />
+
+                <ImageView
+                    android:id="@+id/gelas_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/glass_empty"
+                    app:layout_constraintEnd_toEndOf="@id/gelas_4"
+                    app:layout_constraintStart_toStartOf="@+id/gelas_4"
+                    app:layout_constraintTop_toBottomOf="@+id/gelas_4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <View
+            android:id="@+id/garis2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="18dp"
+            android:background="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_minum" />
+
+        <TextView
+            android:id="@+id/tv_olahraga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/olahraga"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_Minum"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="@id/tv_Minum"
+            app:layout_constraintTop_toBottomOf="@+id/garis2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_olahraga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_olahraga"
+            tools:listitem="@layout/item_olahraga" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

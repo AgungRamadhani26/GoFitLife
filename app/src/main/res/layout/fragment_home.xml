@@ -96,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Terbakar"
+                android:text="@string/terbakar"
                 android:textColor="@color/grey3"
                 android:textSize="16sp"
                 android:layout_marginStart="20dp"/>
@@ -186,7 +186,7 @@
                 android:id="@+id/animateTextPercent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="60%"
+                android:text="@string/_60"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:layout_marginStart="305dp"
@@ -213,7 +213,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:text="Total kalori : 761 KKAL"
+            android:text="@string/total_kalori_761_kkal"
             android:textColor="@color/grey1"
             app:layout_constraintBottom_toBottomOf="@+id/cardImage1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -369,7 +369,7 @@
         <ImageView
             android:id="@+id/cardImage2"
             android:layout_width="match_parent"
-            android:layout_height="420dp"
+            android:layout_height="370dp"
             android:background="@color/lightGreen"
             android:contentDescription="@string/greencard"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -393,11 +393,13 @@
             app:layout_constraintVertical_bias="0.05" />
 
         <TextView
+            android:id="@+id/tv_lihat_resep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/lihat_semua"
             android:textSize="16sp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/cardImage2"
             app:layout_constraintEnd_toEndOf="@id/cardImage2"
             app:layout_constraintHorizontal_bias="0.948"
@@ -413,16 +415,16 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="@+id/cardImage2"
             app:layout_constraintEnd_toEndOf="@id/cardImage2"
-            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/cardImage2"
             app:layout_constraintTop_toTopOf="@+id/cardImage2"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.45"
             tools:listitem="@layout/item2" />
 
         <ImageView
             android:id="@+id/cardImage3"
             android:layout_width="match_parent"
-            android:layout_height="420dp"
+            android:layout_height="350dp"
             android:layout_marginTop="24dp"
             android:background="@color/lightGreen"
             android:contentDescription="@string/greencard"
@@ -447,11 +449,13 @@
             app:layout_constraintVertical_bias="0.05" />
 
         <TextView
+            android:id="@+id/tv_lihat_artikel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/lihat_semua"
             android:textSize="16sp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/cardImage3"
             app:layout_constraintEnd_toEndOf="@id/cardImage3"
             app:layout_constraintHorizontal_bias="0.948"
@@ -467,10 +471,10 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="@+id/cardImage3"
             app:layout_constraintEnd_toEndOf="@id/cardImage3"
-            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/cardImage3"
             app:layout_constraintTop_toTopOf="@+id/cardImage3"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.62"
             tools:listitem="@layout/item3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

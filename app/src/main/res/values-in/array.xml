@@ -2,21 +2,21 @@
 <resources>
     <!-- Group1 Home -->
     <string-array name="judul">
-        <item>Breakfast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
+        <item>Sarapan</item>
+        <item>Makan Siang</item>
+        <item>Makan Malam</item>
     </string-array>
 
     <string-array name="subjudul1">
-        <item>Omelette Sandwich</item>
-        <item>Tofu with Egg</item>
-        <item>Chicken with Corn</item>
+        <item>Omelete sandwidch</item>
+        <item>Tofu with egg</item>
+        <item>Chicken with corn</item>
     </string-array>
 
     <string-array name="kkal1">
-        <item>333 KCAL | 20 minutes</item>
-        <item>140 KCAL | 20 minutes</item>
-        <item>223 KCAL | 20 minutes</item>
+        <item>333 KKAL | 20 menit</item>
+        <item>140 KKAL | 20 menit</item>
+        <item>223 KKAL | 20 menit</item>
     </string-array>
 
     <string-array name="subjudul2">
@@ -26,25 +26,25 @@
     </string-array>
 
     <string-array name="kkal2">
-        <item>14 KCAL</item>
-        <item>89 KCAL</item>
-        <item>62 KCAL</item>
+        <item>14 KKAL</item>
+        <item>89 KKAL</item>
+        <item>62 KKAL</item>
     </string-array>
 
     <!-- Group2 Home -->
     <string-array name="deskripsi1">
-        <item>5 healthy lifestyle behaviors that can start from the family</item>
-        <item>6 easy ways to maintain a healthy lifestyle</item>
-        <item>Diet without torture, the combination of DEBM diet</item>
-        <item>The importance of clean and healthy living behaviors (PHBS)</item>
+        <item>5 perilaku hidup sehat yang dapat di mulai dari keluarga</item>
+        <item>6 cara mudah menjaga gaya hidup sehat</item>
+        <item>Diet tanpa menyiksa, ini paduan melakukan diet DEBM</item>
+        <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
     </string-array>
 
     <!-- Group3 Home -->
     <string-array name="deskripsi2">
-        <item>5 healthy lifestyle behaviors that can start from the family</item>
-        <item>6 easy ways to maintain a healthy lifestyle</item>
-        <item>Diet without torture, the combination of DEBM diet</item>
-        <item>The importance of clean and healthy living behaviors (PHBS)</item>
+        <item>5 perilaku hidup sehat yang dapat di mulai dari keluarga</item>
+        <item>6 cara mudah menjaga gaya hidup sehat</item>
+        <item>Diet tanpa menyiksa, ini paduan melakukan diet DEBM</item>
+        <item>Ini pentingnya perilaku hidup bersih dan sehat (PHBS)</item>
     </string-array>
 
     <!-- Drink page -->
@@ -62,16 +62,16 @@
     </string-array>
 
     <string-array name="subjudul3">
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
-        <item>100 kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
+        <item>100kcal</item>
     </string-array>
 
     <string-array name="subjudul4">
@@ -88,8 +88,8 @@
     </string-array>
 
     <string-array name="lamawaktu_olahraga">
-        <item>30 Minute</item>
-        <item>60 Minute</item>
+        <item>30 Menit</item>
+        <item>60 Menit</item>
     </string-array>
 
     <string-array name="waktu_olahraga">

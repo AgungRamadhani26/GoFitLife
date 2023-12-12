@@ -24,6 +24,12 @@ class DrinkFragment : Fragment() {
         binding = FragmentDrinkBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        keyboardAction()
+        setAdapter()
+        return view
+    }
+
+    private fun keyboardAction() {
         // Menambahkan OnTouchListener ke RecyclerView
         binding.recyclerView.setOnTouchListener { _, event ->
             // Memeriksa apakah sentuhan terjadi di luar EditText
@@ -42,11 +48,10 @@ class DrinkFragment : Fragment() {
             return@setOnTouchListener false
         }
         // Menambahkan OnTouchListener ke ConstraintLayout
-        binding.constraintLayout.setOnTouchListener { _, event ->
+        binding.container.setOnTouchListener { _, event ->
             // Memeriksa apakah sentuhan terjadi di luar EditText dan RecyclerView
             if (event.action == MotionEvent.ACTION_DOWN) {
-                val imm =
-                    context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 if (binding.etSearch.isFocused) {
                     val outRectEditText = android.graphics.Rect()
                     binding.etSearch.getGlobalVisibleRect(outRectEditText)
@@ -59,14 +64,6 @@ class DrinkFragment : Fragment() {
             }
             return@setOnTouchListener false
         }
-
-        setAdapter()
-        return view
-    }
-
-    private fun hideKeyboard(view: View) {
-        val imm = context?.getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun setAdapter() {

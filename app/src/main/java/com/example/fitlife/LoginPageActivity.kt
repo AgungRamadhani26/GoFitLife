@@ -1,9 +1,13 @@
 package com.example.fitlife
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import com.example.fitlife.databinding.ActivityLoginPageBinding
 
 class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
@@ -27,6 +31,8 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnSignIn.setOnClickListener(this)
         binding.loginToSignup.setOnClickListener(this)
         binding.tvLupaKataSandi.setOnClickListener(this)
+
+        keyboardAction()
     }
 
     override fun onClick(v: View) {
@@ -40,15 +46,15 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
                 var isInputErrLog = false
                 if (inputEmailLogin.isEmpty()){
                     isInputErrLog = true
-                    binding.etEmailLog.error = "Field email harus diisi"
+                    binding.etEmailLog.error = getString(R.string.email_require)
                 }else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(inputEmailLogin).matches()){
                     isInputErrLog = true
-                    binding.etEmailLog.error = "Format email salah"
+                    binding.etEmailLog.error = getString(R.string.invalid_email_format)
                 }
 
                 if (inputPasswordLogin.isEmpty()){
                     isInputErrLog =true
-                    binding.etPasswordLog.error = "Password harus diisi"
+                    binding.etPasswordLog.error = getString(R.string.password_require)
                 }
 
                 if (!isInputErrLog){
@@ -65,6 +71,27 @@ class LoginPageActivity : AppCompatActivity(), View.OnClickListener {
             binding.loginToSignup -> {
                 val intent = Intent(this@LoginPageActivity, RegisterPageAcrivity::class.java)
                 startActivity(intent)
+            }
+        }
+    }
+
+    private fun keyboardAction() {
+        binding.container.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                hideKeyboardAndClearFocus(binding.etEmailLog, event)
+                hideKeyboardAndClearFocus(binding.etPasswordLog, event)
+            }
+            return@setOnTouchListener false
+        }
+    }
+    private fun hideKeyboardAndClearFocus(editText: EditText, event: MotionEvent) {
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        if (editText.isFocused) {
+            val outRectEditText = android.graphics.Rect()
+            editText.getGlobalVisibleRect(outRectEditText)
+            if (!outRectEditText.contains(event.rawX.toInt(), event.rawY.toInt())) {
+                imm.hideSoftInputFromWindow(editText.windowToken, 0)
+                editText.clearFocus()
             }
         }
     }
