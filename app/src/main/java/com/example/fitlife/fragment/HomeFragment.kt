@@ -1,4 +1,4 @@
-package com.example.fitlife.Fragment
+package com.example.fitlife.fragment
 
 import android.animation.ValueAnimator
 import android.os.Bundle

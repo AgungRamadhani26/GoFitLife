@@ -1,4 +1,4 @@
-package com.example.fitlife.Fragment
+package com.example.fitlife.fragment
 
 import android.content.Context
 import android.os.Bundle

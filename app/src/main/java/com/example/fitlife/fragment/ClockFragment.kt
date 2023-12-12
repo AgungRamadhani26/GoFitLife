@@ -1,13 +1,11 @@
-package com.example.fitlife.Fragment
+package com.example.fitlife.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.fitlife.R
 import com.example.fitlife.databinding.FragmentClockBinding
-import com.example.fitlife.databinding.FragmentDrinkBinding
 
 class ClockFragment : Fragment() {
 

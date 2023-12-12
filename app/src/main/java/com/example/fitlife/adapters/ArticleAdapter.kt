@@ -23,9 +23,9 @@ class ArticleAdapter (private val articleList: ArrayList<Article>) : RecyclerVie
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         with(holder) {
             with(articleList[position]) {
-                binding.thumbnail.setImageResource(this.thumbnail)
-                binding.headline.text = this.headline
-                binding.excerpt.text = this.excerpt
+//                binding.thumbnail.setImageResource(this.thumbnail)
+                binding.headline.text = this.title
+                binding.excerpt.text = this.contentSnippet
             }
         }
     }

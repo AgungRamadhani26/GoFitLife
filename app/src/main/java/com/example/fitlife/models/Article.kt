@@ -1,8 +1,9 @@
 package com.example.fitlife.models
 
 data class Article(
-    var thumbnail: Int,
-    var headline: String,
-    var excerpt: String,
+    var title: String,
     var link: String,
+    var contentSnippet: String,
+    var isoDate: String,
+    var thumbnail: Int
 )

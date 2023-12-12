@@ -57,4 +57,17 @@ dependencies {
 
     // progress bar round precentage
     implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
+
+    // ViewModel
+    val lifecycle_version = "2.3.1"
+    val arch_version = "2.2.0"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    // Retrofit Dependency
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0-RC")
 }

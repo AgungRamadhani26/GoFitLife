@@ -9,11 +9,11 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.fitlife.Fragment.ClockFragment
-import com.example.fitlife.Fragment.DrinkFragment
-import com.example.fitlife.Fragment.GlobeFragment
-import com.example.fitlife.Fragment.HomeFragment
-import com.example.fitlife.Fragment.UserFragment
+import com.example.fitlife.fragment.ClockFragment
+import com.example.fitlife.fragment.DrinkFragment
+import com.example.fitlife.fragment.GlobeFragment
+import com.example.fitlife.fragment.HomeFragment
+import com.example.fitlife.fragment.UserFragment
 import com.example.fitlife.databinding.ActivityBottomNavbarBinding
 import com.example.fitlife.viewModel.ViewModel
 

@@ -1,4 +1,4 @@
-package com.example.fitlife.Fragment
+package com.example.fitlife.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.fitlife.EditInformasiPribadiActivity
 import com.example.fitlife.EditPasswordPageActivity
-import com.example.fitlife.LoginPageActivity
-import com.example.fitlife.R
-import com.example.fitlife.databinding.FragmentDrinkBinding
 import com.example.fitlife.databinding.FragmentUserBinding
 
 class UserFragment : Fragment(), View.OnClickListener {
