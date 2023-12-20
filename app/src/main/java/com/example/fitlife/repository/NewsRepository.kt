@@ -4,20 +4,20 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.fitlife.api.ApiInterface
-import com.example.fitlife.models.News
+import com.example.fitlife.models.Globe
 
 class NewsRepository(private val apiInterface: ApiInterface) {
-    private val newsLiveData = MutableLiveData<News>()
+    private val globeLiveData = MutableLiveData<Globe>()
 
-    val news: LiveData<News>
-        get() = newsLiveData
+    val globe: LiveData<Globe>
+        get() = globeLiveData
 
     suspend fun getNews() {
         val result = apiInterface.getNews()
         if (result.body() != null) {
-            newsLiveData.postValue(result.body())
+            globeLiveData.postValue(result.body())
         }
-        Log.d("result", "getNews: ${result}")
-        Log.d("body", "getNews: ${result.body()}")
+//        Log.d("result", "getGlobe: ${result}")
+//        Log.d("body", "getGlobe: ${result.body()}")
     }
 }

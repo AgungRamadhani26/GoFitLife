@@ -1,7 +1,7 @@
 package com.example.fitlife.models.news
 
-import com.example.fitlife.models.Article
+import com.example.fitlife.models.News
 
 data class Data (
-    val articles: List<Article>
+    val news: List<News>
 )

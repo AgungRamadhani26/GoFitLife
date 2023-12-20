@@ -1,6 +1,8 @@
 package com.example.fitlife.fragment
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,7 +13,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitlife.models.Article
+import com.example.fitlife.models.News
 import com.example.fitlife.adapters.ArticleAdapter
 import com.example.fitlife.R
 import com.example.fitlife.api.ApiInterface
@@ -22,7 +24,7 @@ import com.example.fitlife.viewModel.NewsViewModel
 import com.example.fitlife.viewModel.NewsViewModelFactory
 
 class GlobeFragment : Fragment() {
-    private lateinit var articleArrayList: ArrayList<Article>
+    private lateinit var newsArrayList: ArrayList<News>
     private lateinit var binding: FragmentGlobeBinding
     private lateinit var articleAdapter: ArticleAdapter
     private lateinit var articleHeadlines: Array<String>
@@ -33,24 +35,17 @@ class GlobeFragment : Fragment() {
         // inflate
         binding = FragmentGlobeBinding.inflate(inflater, container, false)
         val view = binding.root
-
-        // get Array
-        articleHeadlines = resources.getStringArray(R.array.articleHeadline)
-        articleExcerpts = resources.getStringArray(R.array.articleExcerpt)
-        articleThumbnails = listOf(
-            R.drawable.artikel1,
-            R.drawable.artikel2,
-            R.drawable.artikel3,
-        )
+        val apiInterface = ApiUtilities.getInstance().create(ApiInterface::class.java)
+        val newsRepository = NewsRepository(apiInterface)
 
         // recycler view
-//        articleArrayList = arrayListOf<Article>()
+//        newsArrayList = arrayListOf<News>()
 //        binding.rvArticle.setHasFixedSize(true)
 //        binding.rvArticle.layoutManager = LinearLayoutManager(context)
-            // get article data
+//        //     get article data
 //        getArticleData()
-            // set article adapter
-//        articleAdapter = ArticleAdapter(articleArrayList)
+//        //     set article adapter
+//        articleAdapter = ArticleAdapter(newsArrayList)
 //        binding.rvArticle.adapter = articleAdapter
 
         // Menambahkan OnTouchListener ke ConstraintLayout
@@ -72,29 +67,38 @@ class GlobeFragment : Fragment() {
             return@setOnTouchListener false
         }
 
-        val apiInterface = ApiUtilities.getInstance().create(ApiInterface::class.java)
-
-        val newsRepository = NewsRepository(apiInterface)
-
         newsViewModel = ViewModelProvider(this, NewsViewModelFactory(newsRepository)).get(
             NewsViewModel::class.java)
 
-        newsViewModel.news.observe(viewLifecycleOwner, {
-            Log.d("asd", "onCreate: ${it}")
-        })
+        // set recycler view
+        newsArrayList = arrayListOf<News>()
+        binding.rvArticle.setHasFixedSize(true)
+        binding.rvArticle.layoutManager = LinearLayoutManager(context)
+        // get data
+        newsViewModel.globe.observe(viewLifecycleOwner) {
+            for (news in it.data.news) {
+                newsArrayList.add(news)
+//                Log.d("Observe Item", news.toString())
+            }
+            //     set article adapter
+            articleAdapter = ArticleAdapter(newsArrayList)
+            binding.rvArticle.adapter = articleAdapter
+            articleAdapter.setOnItemClick(object : ArticleAdapter.OnItemClick {
+                override fun onItemClicked(data: News) {
+                    val openURL = Intent(Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse(data.link)
 
+                    startActivity(openURL)
+                }
+            })
+        }
+
+//        Log.d("Observe Array size", newsArrayList.size.toString())
         return view
     }
 
     private fun hideKeyboard(view: View) {
         val imm = context?.getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
-    }
-
-    private fun getArticleData() {
-        for (i in articleHeadlines.indices) {
-//            val article = Article(articleThumbnails[i], articleHeadlines[i], articleExcerpts[i], "")
-//            articleArrayList.add(article)
-        }
     }
 }

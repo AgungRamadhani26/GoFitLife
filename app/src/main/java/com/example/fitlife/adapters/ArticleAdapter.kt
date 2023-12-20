@@ -4,10 +4,20 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitlife.databinding.CardArticleBinding
-import com.example.fitlife.models.Article
+import com.example.fitlife.models.News
 
-class ArticleAdapter (private val articleList: ArrayList<Article>) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
+class ArticleAdapter (private val newsList: ArrayList<News>) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
     class ArticleViewHolder(val binding: CardArticleBinding): RecyclerView. ViewHolder(binding.root)
+
+    private lateinit var onItemClick: OnItemClick
+
+    fun setOnItemClick(onItemClick: OnItemClick) {
+        this.onItemClick = onItemClick
+    }
+
+    interface OnItemClick {
+        fun onItemClicked(data: News)
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -18,15 +28,25 @@ class ArticleAdapter (private val articleList: ArrayList<Article>) : RecyclerVie
         return ArticleViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = articleList.size
+    override fun getItemCount(): Int = newsList.size
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         with(holder) {
-            with(articleList[position]) {
+            with(newsList[position]) {
 //                binding.thumbnail.setImageResource(this.thumbnail)
-                binding.headline.text = this.title
+                binding.headline.text = cutTitle(this.title)
                 binding.excerpt.text = this.contentSnippet
             }
+        }
+        holder.itemView.setOnClickListener{
+            onItemClick.onItemClicked(newsList[holder.adapterPosition])
+        }
+    }
+
+    private fun cutTitle(title: String): String {
+        return when {
+            title.length > 70 -> title.substring(0..60) + "..."
+            else -> title
         }
     }
 }

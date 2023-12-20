@@ -87,7 +87,7 @@
     <string name="profil_notifikasi_olahraga">Pengingat olahraga</string>
     <string name="keluar">keluar</string>
 
-    <!-- Article Page -->
+    <!-- News Page -->
     <string name="article">Artikel Kesehatan</string>
     <integer-array name="articleThumbnail">
         <item>@drawable/artikel1</item>

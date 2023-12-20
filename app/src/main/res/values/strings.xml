@@ -86,7 +86,7 @@
     <string name="profil_notifikasi_olahraga">Exercise Reminder</string>
     <string name="keluar">Sign Out</string>
 
-    <!-- Article Page -->
+    <!-- News Page -->
     <string name="article">Health Articles</string>
     <integer-array name="articleThumbnail">
         <item>@drawable/artikel1</item>
@@ -116,7 +116,7 @@
 
     <!-- Group 1 -->
     <!-- Text -->
-    <string name="aktivitas">Activity</string>
+    <string name="aktivitas">Status</string>
     <string name="sisa">Remaining</string>
     <string name="_1000_kcal">1000 KCAL</string>
     <string name="_400_kcal">400 KCAL</string>
