@@ -27,9 +27,6 @@ class GlobeFragment : Fragment() {
     private lateinit var newsArrayList: ArrayList<News>
     private lateinit var binding: FragmentGlobeBinding
     private lateinit var articleAdapter: ArticleAdapter
-    private lateinit var articleHeadlines: Array<String>
-    private lateinit var articleExcerpts: Array<String>
-    private lateinit var articleThumbnails: List<Int>
     private lateinit var newsViewModel:NewsViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // inflate
@@ -37,16 +34,6 @@ class GlobeFragment : Fragment() {
         val view = binding.root
         val apiInterface = ApiUtilities.getInstance().create(ApiInterface::class.java)
         val newsRepository = NewsRepository(apiInterface)
-
-        // recycler view
-//        newsArrayList = arrayListOf<News>()
-//        binding.rvArticle.setHasFixedSize(true)
-//        binding.rvArticle.layoutManager = LinearLayoutManager(context)
-//        //     get article data
-//        getArticleData()
-//        //     set article adapter
-//        articleAdapter = ArticleAdapter(newsArrayList)
-//        binding.rvArticle.adapter = articleAdapter
 
         // Menambahkan OnTouchListener ke ConstraintLayout
         binding.scrollView.setOnTouchListener { _, event ->
@@ -78,22 +65,21 @@ class GlobeFragment : Fragment() {
         newsViewModel.globe.observe(viewLifecycleOwner) {
             for (news in it.data.news) {
                 newsArrayList.add(news)
-//                Log.d("Observe Item", news.toString())
             }
-            //     set article adapter
+            // set article adapter
             articleAdapter = ArticleAdapter(newsArrayList)
             binding.rvArticle.adapter = articleAdapter
+            // set clickable card
             articleAdapter.setOnItemClick(object : ArticleAdapter.OnItemClick {
                 override fun onItemClicked(data: News) {
                     val openURL = Intent(Intent.ACTION_VIEW)
                     openURL.data = Uri.parse(data.link)
-
                     startActivity(openURL)
                 }
             })
+            binding.loadingBar.visibility = View.GONE // Menghilangkan loading bar
         }
 
-//        Log.d("Observe Array size", newsArrayList.size.toString())
         return view
     }
 
