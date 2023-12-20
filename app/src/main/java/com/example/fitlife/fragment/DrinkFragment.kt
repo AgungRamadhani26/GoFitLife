@@ -8,24 +8,47 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import com.example.fitlife.R
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fitlife.adapters.Adapter4
+import com.example.fitlife.api.ApiUtilities
 import com.example.fitlife.databinding.FragmentDrinkBinding
-import com.example.fitlife.models.Model4
+import com.example.fitlife.models.resep.RecipesItem
+import com.example.fitlife.models.resep.ResponseResep
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DrinkFragment : Fragment() {
     // binding fragment_drink.xml
     private lateinit var binding: FragmentDrinkBinding
-    // RecyclerView
-    private lateinit var adapter4: Adapter4
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // inflate
         binding = FragmentDrinkBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        ApiUtilities.getService().getResep().enqueue(object : Callback<ResponseResep> {
+            override fun onResponse(call: Call<ResponseResep>, response: Response<ResponseResep>){
+                if(response.isSuccessful){
+                    val responseResep = response.body()
+                    val dataResep = responseResep?.data?.recipes
+                    val resepAdapter = Adapter4(dataResep as List<RecipesItem>)
+                    binding.recyclerView.apply{
+                        layoutManager = GridLayoutManager(requireContext(), 2)
+                        setHasFixedSize(true)
+                        resepAdapter.notifyDataSetChanged()
+                        adapter = resepAdapter
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseResep>, t: Throwable) {
+                Toast.makeText(requireContext(), t.localizedMessage, Toast.LENGTH_SHORT).show()
+            }
+        })
+
         keyboardAction()
-        setAdapter()
         return view
     }
 
@@ -65,32 +88,4 @@ class DrinkFragment : Fragment() {
             return@setOnTouchListener false
         }
     }
-
-    private fun setAdapter() {
-        val dataList: MutableList<Model4> = mutableListOf()
-        // Iterasi menggunakan image() sebagai referensi
-        image().forEachIndexed { index, name ->
-            dataList.add(Model4(name, judul()[index], subJudul1()[index], subJudul2()[index]))
-        }
-        // Set adapter untuk RecyclerView
-        adapter4 = Adapter4(dataList)
-        binding.recyclerView.adapter = adapter4
-    }
-
-    private fun image(): List<Int> = listOf(
-        R.drawable.food4,
-        R.drawable.food5,
-        R.drawable.food6,
-        R.drawable.food7,
-        R.drawable.food8,
-        R.drawable.food9,
-        R.drawable.food10,
-        R.drawable.food11,
-        R.drawable.food12,
-        R.drawable.food13,
-    )
-
-    private fun judul(): Array<String> = resources.getStringArray(R.array.judul2)
-    private fun subJudul1(): Array<String> = resources.getStringArray(R.array.subjudul3)
-    private fun subJudul2(): Array<String> = resources.getStringArray(R.array.subjudul4)
 }
