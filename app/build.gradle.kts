@@ -73,4 +73,6 @@ dependencies {
 
     //glide untuk gambar
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    // picasso untuk gambar
+    implementation ("com.squareup.picasso:picasso:2.8")
 }

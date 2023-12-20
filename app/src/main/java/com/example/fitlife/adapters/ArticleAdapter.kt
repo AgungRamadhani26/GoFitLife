@@ -1,10 +1,13 @@
 package com.example.fitlife.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitlife.databinding.CardArticleBinding
 import com.example.fitlife.models.News
+import com.squareup.picasso.Picasso
 
 class ArticleAdapter (private val newsList: ArrayList<News>) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
     class ArticleViewHolder(val binding: CardArticleBinding): RecyclerView. ViewHolder(binding.root)
@@ -33,7 +36,7 @@ class ArticleAdapter (private val newsList: ArrayList<News>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         with(holder) {
             with(newsList[position]) {
-//                binding.thumbnail.setImageResource(this.thumbnail)
+                Picasso.get().load(this.image.small).fit().centerCrop().into(holder.binding.thumbnail)
                 binding.headline.text = cutTitle(this.title)
                 binding.excerpt.text = this.contentSnippet
             }
