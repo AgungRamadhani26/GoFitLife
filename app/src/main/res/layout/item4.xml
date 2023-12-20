@@ -25,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/boiled_chicken"
+            android:textSize="10sp"
             android:fontFamily="@font/poppins_bold"
             android:layout_marginTop="175dp"
             android:layout_marginStart="10dp"/>

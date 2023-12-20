@@ -12,4 +12,8 @@ object ApiUtilities {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
+    fun getService(): ApiInterface{
+        return getInstance().create(ApiInterface::class.java)
+    }
 }
