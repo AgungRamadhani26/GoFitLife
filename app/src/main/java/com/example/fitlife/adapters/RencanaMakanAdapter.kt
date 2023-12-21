@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitlife.databinding.ItemRencanaMakananBinding
 
-import com.example.fitlife.models.Model1
+import com.example.fitlife.models.home.Model1
 
 class RencanaMakanAdapter(private val list: List<Model1>): RecyclerView.Adapter<RencanaMakanAdapter.ViewHolder>() {
 

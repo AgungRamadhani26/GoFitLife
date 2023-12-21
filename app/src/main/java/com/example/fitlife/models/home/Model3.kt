@@ -1,4 +1,4 @@
-package com.example.fitlife.models
+package com.example.fitlife.models.home
 
 data class Model3(
     val image: Int,

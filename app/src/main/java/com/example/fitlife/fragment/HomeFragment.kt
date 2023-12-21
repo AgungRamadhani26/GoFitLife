@@ -1,21 +1,19 @@
 package com.example.fitlife.fragment
 
 import android.animation.ValueAnimator
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import com.example.fitlife.R
-import com.example.fitlife.adapters.Adapter1
-import com.example.fitlife.adapters.Adapter2
-import com.example.fitlife.adapters.Adapter3
+import com.example.fitlife.adapters.homeAdapter.Adapter1
+import com.example.fitlife.adapters.homeAdapter.Adapter2
+import com.example.fitlife.adapters.homeAdapter.Adapter3
 import com.example.fitlife.databinding.FragmentHomeBinding
-import com.example.fitlife.models.Model1
-import com.example.fitlife.models.Model2
-import com.example.fitlife.models.Model3
+import com.example.fitlife.models.home.Model1
+import com.example.fitlife.models.home.Model2
+import com.example.fitlife.models.home.Model3
 
 class HomeFragment : Fragment() {
     // binding fragment_home.xml

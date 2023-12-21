@@ -13,7 +13,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class Adapter4(private val list: List<RecipesItem>): RecyclerView.Adapter<Adapter4.ViewHolder>() {
+class DrinkAdapter(private val list: List<RecipesItem>): RecyclerView.Adapter<DrinkAdapter.ViewHolder>() {
     // Mendapatkan data item2.xml
     class ViewHolder(val binding: Item4Binding): RecyclerView.ViewHolder(binding.root)
 

@@ -1,6 +1,6 @@
 package com.example.fitlife.models
 
-data class Model4(
+data class Drink(
     val image: Int,
     val judul: String,
     val subJudul1: String,

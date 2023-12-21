@@ -2,7 +2,6 @@ package com.example.fitlife.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -11,7 +10,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.fitlife.adapters.Adapter4
+import com.example.fitlife.adapters.DrinkAdapter
 import com.example.fitlife.api.ApiUtilities
 import com.example.fitlife.databinding.FragmentDrinkBinding
 import com.example.fitlife.models.resep.RecipesItem
@@ -34,7 +33,7 @@ class DrinkFragment : Fragment() {
                 if(response.isSuccessful){
                     val responseResep = response.body()
                     val dataResep = responseResep?.data?.recipes
-                    val resepAdapter = Adapter4(dataResep as List<RecipesItem>)
+                    val resepAdapter = DrinkAdapter(dataResep as List<RecipesItem>)
                     binding.recyclerView.apply{
                         layoutManager = GridLayoutManager(requireContext(), 2)
                         setHasFixedSize(true)

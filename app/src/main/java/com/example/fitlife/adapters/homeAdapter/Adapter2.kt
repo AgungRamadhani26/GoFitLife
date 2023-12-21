@@ -1,18 +1,19 @@
-package com.example.fitlife.adapters
+package com.example.fitlife.adapters.homeAdapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitlife.databinding.Item2Binding
-import com.example.fitlife.databinding.Item3Binding
-import com.example.fitlife.models.Model3
+import com.example.fitlife.models.home.Model2
 
-class Adapter3(private val list: List<Model3>): RecyclerView.Adapter<Adapter3.ViewHolder>(){
+class Adapter2(private val list: List<Model2>): RecyclerView.Adapter<Adapter2.ViewHolder>() {
+
     // Mendapatkan data item2.xml
-    class ViewHolder(val binding: Item3Binding): RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: Item2Binding): RecyclerView.ViewHolder(binding.root)
 
+    // membuat data
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = Item3Binding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = Item2Binding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

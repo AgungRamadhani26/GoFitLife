@@ -1,10 +1,10 @@
-package com.example.fitlife.adapters
+package com.example.fitlife.adapters.homeAdapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitlife.databinding.Item1Binding
-import com.example.fitlife.models.Model1
+import com.example.fitlife.models.home.Model1
 
 class Adapter1(private val list: List<Model1>): RecyclerView.Adapter<Adapter1.ViewHolder>() {
 

@@ -9,7 +9,7 @@ import com.example.fitlife.R
 import com.example.fitlife.adapters.OlahragaAdapter
 import com.example.fitlife.adapters.RencanaMakanAdapter
 import com.example.fitlife.databinding.FragmentClockBinding
-import com.example.fitlife.models.Model1
+import com.example.fitlife.models.home.Model1
 import com.example.fitlife.models.Olahraga
 
 class ClockFragment : Fragment() {
