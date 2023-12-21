@@ -164,4 +164,10 @@
     <string name="jogging">Jogging</string>
     <string name="lama_olahraga">30 Minute</string>
     <string name="waktu_olahraga">07.00</string>
+
+    <!-- Create Plan -->
+    <string name="food_fragment_headline">Food Plan fragment</string>
+    <string name="drink_fragment_headline">Target Hidrasi</string>
+    <string name="drink_fragment_sub_headline">Ayo atur target minum mu hari ini!</string>
+    <string name="exercise_fragment_headline">Food Plan fragment</string>
 </resources>

@@ -75,4 +75,6 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     // picasso untuk gambar
     implementation ("com.squareup.picasso:picasso:2.8")
+    // NumberPicker untuk number picker
+    implementation ("io.github.ShawnLin013:number-picker:2.4.13")
 }
