@@ -1,5 +1,6 @@
 package com.example.fitlife
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -24,6 +25,11 @@ class CreatePlanActivity : AppCompatActivity() {
 
         createPlanAdapter = CreatePlanAdapter(supportFragmentManager, lifecycle)
         binding.viewPager.adapter = createPlanAdapter
+
+        binding.backPlan.setOnClickListener {
+            val intent = Intent(this@CreatePlanActivity, BottomNavbarActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {

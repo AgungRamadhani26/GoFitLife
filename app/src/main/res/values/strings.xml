@@ -150,7 +150,7 @@
     <string name="artikel_kesehatan_untukmu">Health Articles for You</string>
 
     <!--Clock page-->
-    <string name="rencana">Plan</string>
+    <string name="rencana">My Plan</string>
     <string name="rencana_saya">My plan</string>
     <string name="buat_rencana">Create plan</string>
     <string name="today">Today</string>
@@ -166,8 +166,10 @@
     <string name="waktu_olahraga">07.00</string>
 
     <!-- Create Plan -->
-    <string name="food_fragment_headline">Food Plan fragment</string>
+    <string name="food_fragment_headline">Makanan Pilihan</string>
+    <string name="food_fragment_sub_headline">Pilih makanan sesuai mood kamu.</string>
     <string name="drink_fragment_headline">Target Hidrasi</string>
     <string name="drink_fragment_sub_headline">Ayo atur target minum mu hari ini!</string>
-    <string name="exercise_fragment_headline">Food Plan fragment</string>
+    <string name="exercise_fragment_headline">Rencana Olahraga</string>
+    <string name="exercise_fragment_sub_headline">Atur jadwal olahraga mu hari ini!</string>
 </resources>

@@ -1,18 +1,24 @@
 package com.example.fitlife.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.fitlife.CreatePlanActivity
+import com.example.fitlife.EditInformasiPribadiActivity
+import com.example.fitlife.EditPasswordPageActivity
 import com.example.fitlife.R
+import com.example.fitlife.adapters.CreatePlanAdapter
 import com.example.fitlife.adapters.OlahragaAdapter
 import com.example.fitlife.adapters.RencanaMakanAdapter
 import com.example.fitlife.databinding.FragmentClockBinding
 import com.example.fitlife.models.home.Model1
 import com.example.fitlife.models.Olahraga
 
-class ClockFragment : Fragment() {
+class ClockFragment : Fragment(), View.OnClickListener {
     //binding fragment clock
     private lateinit var binding: FragmentClockBinding
     // RecyclerView makanan
@@ -25,31 +31,22 @@ class ClockFragment : Fragment() {
         binding = FragmentClockBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        //Button Rencana saya dan Buat rencana
-        val btnRencanaSaya = binding.btnRencanaSaya
-        val btnBuatRencana = binding.btnBuatRencana
-
-        // atur latar belakang button
-        btnRencanaSaya.setBackgroundResource(R.drawable.btn_theme_2)
-        btnBuatRencana.setBackgroundResource(R.color.no_color)
-
-        btnRencanaSaya.setOnClickListener{
-            //atur latar belakang button
-            btnRencanaSaya.setBackgroundResource(R.drawable.btn_theme_2)
-            btnBuatRencana.setBackgroundResource(R.color.no_color)
-        }
-
-        btnBuatRencana.setOnClickListener{
-            //atur latar belakang button
-            btnRencanaSaya.setBackgroundResource(R.color.no_color)
-            btnBuatRencana.setBackgroundResource(R.drawable.btn_theme_2)
-        }
 
         // initialitation function recyclerView
         setRencanaMakanAdapter()
         setOlahragaAdapter()
 
+        binding.buttonCreate.setOnClickListener(this)
+
         return view
+    }
+    override fun onClick(v: View?) {
+        when(v){
+            binding.buttonCreate -> {
+                val intent = Intent(requireContext(), CreatePlanActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
     // recyclerView makanan
